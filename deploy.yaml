@@ -1,0 +1,17 @@
+import: 
+  - recipe/laravel.php
+
+config:
+  repository: 'https://github.com/Alberto-Repositories/queue.git'
+
+hosts:
+  albertu-ubuntu:
+    remote_user: deployer
+    deploy_path: '~/'
+
+tasks:
+  build:
+    - run: uptime  
+
+after:
+  deploy:failed: deploy:unlock
