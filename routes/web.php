@@ -30,6 +30,6 @@ Route::middleware([
 
     Route::get('check-queue', function () {
         Mail::to('jmondragonescamilla@gmail.com')->send(new TestMail);
-        return 'Echo mamá';
+        return 'Ya quedó amorcin';
     });
 });
